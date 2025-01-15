@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Default Sms</string>
+    <string name="app_name">Sms App</string>
+    <string name="open_settings">Open Settings</string>
+    <string name="exit">Exit</string>
 </resources>

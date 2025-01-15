@@ -91,8 +91,6 @@ class MyApplication : MultiDexApplication(), Application.ActivityLifecycleCallba
             FirebaseMessaging.getInstance().isAutoInitEnabled = true
             FirebaseCrashlytics.getInstance().isCrashlyticsCollectionEnabled = !isDebug
         }
-
-
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
@@ -116,9 +114,7 @@ class MyApplication : MultiDexApplication(), Application.ActivityLifecycleCallba
         activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }
 
-    override fun onActivityStarted(activity: Activity) {
-
-    }
+    override fun onActivityStarted(activity: Activity) {}
 
     override fun onActivityResumed(activity: Activity) {}
     override fun onActivityPaused(activity: Activity) {}
