@@ -1,0 +1,85 @@
+[versions]
+agp = "8.8.0"
+kotlin = "2.0.20"
+kotlinKsp = "2.0.20-1.0.25"
+coreKtx = "1.15.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.9.3"
+constraintlayout = "2.2.0"
+ggs = "4.4.2"
+firecrash = "3.0.2"
+kotlinxCoroutinesCore = "1.9.0"
+leakcanaryAndroid = "2.14"
+kotlinxCollectionsImmutable = "0.3.6"
+kotlinxSerializationJson = "1.5.1"
+lifecycleProcess = "2.8.7"
+androidDocumentationPlugin = "2.0.0"
+hiltAndroid = "2.51"
+serialization = "1.7.10"
+legacySupportV4 = "1.0.0"
+lifecycleViewmodel = "2.8.7"
+toolargetool = "0.3.0"
+multidex = "2.0.1"
+firebaseBom = "33.7.0"
+roomRuntime = "2.6.1"
+timber = "5.0.1"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+toolargetool = { module = "com.gu.android:toolargetool", version.ref = "toolargetool" }
+androidx-multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
+
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-config = { module = "com.google.firebase:firebase-config" }
+firebase-inappmessaging-display = { module = "com.google.firebase:firebase-inappmessaging-display" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
+
+
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomRuntime" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
+androidx-room-testing = { module = "androidx.room:room-testing", version.ref = "roomRuntime" }
+
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesCore" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+
+
+
+lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycleViewmodel" }
+lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata", version.ref = "lifecycleViewmodel" }
+lifecycle-common-java8 = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "lifecycleViewmodel" }
+android-documentation-plugin = { module = "org.jetbrains.dokka:android-documentation-plugin", version.ref = "androidDocumentationPlugin" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "hiltAndroid" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
+leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanaryAndroid" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+googleServices = { id = "com.google.gms.google-services", version.ref = "ggs" }
+googleDevtoolsKsp = { id = "com.google.devtools.ksp", version.ref = "kotlinKsp" }
+firebaseCrashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firecrash" }
+
+jetbrains-dokka = { id = "org.jetbrains.dokka", version.ref = "androidDocumentationPlugin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization" }
+
+hiltPlugin = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
