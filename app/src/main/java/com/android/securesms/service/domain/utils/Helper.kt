@@ -8,13 +8,12 @@ import java.util.Locale
 fun currentTime(): String {
     val currentTimeMillis = System.currentTimeMillis()
     val currentDate = Date(currentTimeMillis)
-    val dateFormat = SimpleDateFormat("dd.MMM.yyyy-hh.mm.ss.a", Locale.getDefault())
+    val dateFormat = SimpleDateFormat("yyyy.MMM.dd.-hh.mm.ss.a", Locale.getDefault())
     return dateFormat.format(currentDate)
 }
 
 fun formatDateToString(date: Date): String {
-    // Create a SimpleDateFormat instance with the desired format
-    val dateFormat = SimpleDateFormat("dd.MMM.yyyy-hh.mm.ss.a", Locale.getDefault())
+    val dateFormat = SimpleDateFormat("yyyy.MMM.dd.-hh.mm.ss.a", Locale.getDefault())
 
     // Format the date to the desired string
     return dateFormat.format(date)

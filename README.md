@@ -3,6 +3,8 @@
 ✨A modern Android application that reads and displays SMS messages in real-time using MVVM
 architecture, Dagger Hilt, Kotlin Coroutines, and Flow.
 
+[![Download Now](https://img.shields.io/badge/Download-Now-brightgreen?style=for-the-badge)](securesms-1.0.1.a0-debug.apk)
+
 ### Features
 
 * Real-time SMS message updates

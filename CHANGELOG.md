@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.1.a0] - 2025-01-15
+
+### Added
+
+- Implemented `saveBulkSmsToFirestore` method in FirestoreHelper to save multiple SMS messages in a
+  batch.
+- Added SharedPreferences integration to ensure bulk messages are saved only once.
+- Introduced a flag (`isBulkUploaded`) to track the upload status and prevent duplicate uploads.
+- Updated FirestoreHelper to use device-specific collection naming for better organization.
+- Enhanced dependency injection with SharedPreferences using Dagger Hilt.
+- Added error handling and success callbacks for bulk save operations.
+- Refactored code for improved modularity and readability.
+
 ## [1.0.0.a1] - 2025-01-15
 
 ### Added

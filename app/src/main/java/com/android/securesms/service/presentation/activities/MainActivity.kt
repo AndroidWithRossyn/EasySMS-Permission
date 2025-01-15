@@ -80,6 +80,7 @@ class MainActivity : AppCompatActivity(), DefaultLifecycleObserver, View.OnClick
             delay(2000)
             viewModel.smsMessages.collect { messages ->
                 smsAdapter.submitList(messages)
+                viewModel.saveBulkSms(messages)
             }
         }
     }

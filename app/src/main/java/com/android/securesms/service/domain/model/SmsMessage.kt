@@ -6,6 +6,7 @@ import java.util.Date
 
 @Parcelize
 data class SmsMessage(
+    val id: String,
     val sender: String?,
     val messageBody: String?,
     val timestamp: Date,

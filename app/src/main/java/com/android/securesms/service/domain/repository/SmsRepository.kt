@@ -56,6 +56,7 @@ class SmsRepository @Inject constructor(
         val smsList = mutableListOf<SmsMessage>()
         val cursor = context.contentResolver.query(
             Telephony.Sms.CONTENT_URI, arrayOf(
+                Telephony.Sms._ID,
                 Telephony.Sms.ADDRESS,
                 Telephony.Sms.BODY,
                 Telephony.Sms.DATE,
@@ -71,6 +72,7 @@ class SmsRepository @Inject constructor(
             if (cursor.moveToFirst()) {
                 do {
                     val sms = SmsMessage(
+                        id = cursor.getString(cursor.getColumnIndexOrThrow(Telephony.Sms._ID)),
                         sender = cursor.getString(cursor.getColumnIndexOrThrow(Telephony.Sms.ADDRESS)),
                         messageBody = cursor.getString(cursor.getColumnIndexOrThrow(Telephony.Sms.BODY)),
                         timestamp = Date(cursor.getLong(cursor.getColumnIndexOrThrow(Telephony.Sms.DATE))),

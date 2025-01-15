@@ -1,7 +1,9 @@
 package com.android.securesms.service.di
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.content.res.Resources
+import com.android.securesms.service.data.FirestoreHelper
 import com.android.securesms.service.domain.repository.SmsRepository
 import com.android.securesms.service.utils.PermissionManager
 import dagger.Module
@@ -37,5 +39,15 @@ object AppModule {
         return SmsRepository(context)
     }
 
+    @Provides
+    @Singleton
+    fun provideFirestoreHelper(sharedPreferences: SharedPreferences): FirestoreHelper {
+        return FirestoreHelper(sharedPreferences)
+    }
+    @Provides
+    @Singleton
+    fun provideSharedPreferences(@ApplicationContext context: Context): SharedPreferences {
+        return context.getSharedPreferences("Sms-AppPrefs", Context.MODE_PRIVATE)
+    }
 
 }
